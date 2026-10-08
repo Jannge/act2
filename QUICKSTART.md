@@ -17,7 +17,7 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # 克隆仓库（或下载）
-cd /path/to/pg-mcp
+cd /path/to/act2
 
 # 安装依赖
 uv sync
@@ -187,7 +187,7 @@ docker-compose logs -f pg-mcp
 - 文档：README.md
 - 配置说明：.env.example
 - Claude Desktop 集成：CLAUDE_DESKTOP_SETUP.md
-- 问题反馈：[GitHub Issues](repository-url/issues)
+- 问题反馈：[GitHub Issues](https://github.com/Jannge/act2/issues)
 
 ---
 

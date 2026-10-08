@@ -25,15 +25,15 @@
 
 ### 方式 A：uv（仓库推荐）
 ```bash
-git clone <repository-url>
-cd pg-mcp
+git clone https://github.com/Jannge/act2.git
+cd act2
 uv sync                       # 安装运行依赖
 uv sync --all-extras         # 含开发依赖（pytest/ruff/mypy）
 ```
 
 ### 方式 B：pip + 虚拟环境
 ```bash
-cd pg-mcp
+cd act2
 python -m venv .venv
 source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -e .
@@ -106,7 +106,7 @@ python -m pg_mcp
   "mcpServers": {
     "postgres": {
       "command": "uv",
-      "args": ["--directory", "/绝对路径/pg-mcp", "run", "python", "-m", "pg_mcp"],
+      "args": ["--directory", "/绝对路径/act2", "run", "python", "-m", "pg_mcp"],
       "env": { "DATABASE_HOST": "localhost", "DATABASE_NAME": "your_db", "OPENAI_API_KEY": "sk-xxxx" }
     }
   }
@@ -115,14 +115,14 @@ python -m pg_mcp
 
 ### 4.2 Web 应用 —— Demo 模式（无需密钥 / 数据库）
 ```bash
-cd pg-mcp
+cd act2
 PG_MCP_DEMO=1 uvicorn webapp.app:app --host 0.0.0.0 --port 8000
 ```
 浏览器打开 `http://127.0.0.1:8000/`，即可看到界面并直接提问。Demo 模式返回的是**示例** SQL 与结果，用于体验交互与界面。
 
 ### 4.3 Web 应用 —— Live 模式（真实查询）
 ```bash
-cd pg-mcp
+cd act2
 uvicorn webapp.app:app --host 0.0.0.0 --port 8000
 ```
 需先按第三节配置好数据库与 `OPENAI_API_KEY`。此时页面提问会真实生成 SQL 并查询数据库。

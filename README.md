@@ -1,5 +1,7 @@
 # PostgreSQL MCP 服务器
 
+> GitHub 仓库：https://github.com/Jannge/act2
+
 一个生产级的 [Model Context Protocol (MCP)](https://modelcontextprotocol.io) 服务器，使用户能够通过自然语言与 PostgreSQL 数据库进行交互。该服务器基于 FastMCP 构建，将自然语言问题转换为安全的 SQL 查询，执行查询并验证结果。一些参考文档：
 
 - Python Postgres MCP 需求研究
@@ -31,8 +33,8 @@
 
 ```bash
 # 克隆仓库
-git clone <repository-url>
-cd pg-mcp
+git clone https://github.com/Jannge/act2.git
+cd act2
 
 # 安装依赖
 uv sync
@@ -48,8 +50,8 @@ vi .env
 
 ```bash
 # 克隆仓库
-git clone <repository-url>
-cd pg-mcp
+git clone https://github.com/Jannge/act2.git
+cd act2
 
 # 创建虚拟环境
 python -m venv .venv
@@ -393,7 +395,7 @@ uv run ruff check .
 ### 项目结构
 
 ```
-pg-mcp/
+act2/
 ├── src/pg_mcp/
 │   ├── cache/              # Schema 缓存
 │   ├── config/             # 配置管理
@@ -681,7 +683,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public
 
 如有问题和疑问：
 
-- GitHub Issues：[repository-url]/issues
+- GitHub Issues：https://github.com/Jannge/act2/issues
 - 文档：查看 `specs/w5/` 目录获取详细设计文档
 
 ## 致谢
